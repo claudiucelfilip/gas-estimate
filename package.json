@@ -1,0 +1,33 @@
+{
+  "name": "@claudiucelfilip/wavelet-gas-estimate",
+  "version": "0.0.2",
+  "description": "Wavelet Library to estimate Gas cost before running Smart Contract Functions",
+  "main": "dist/wavelet-gas-estimate.umd.js",
+  "scripts": {
+    "build-js": "webpack",
+    "build-example": "webpack --config webpack.example.config.js",
+    "build-life": "cd life-web && GOOS=js GOARCH=wasm go build -o ../dist/life-web.wasm",
+    "build": "npm run build-life && npm run build-js",
+    "prepublish": "npm run build",
+    "start": "webpack --config webpack.example.config.js -w"
+  },
+  "author": "Claudiu Filip",
+  "license": "MIT",
+  "devDependencies": {
+    "arraybuffer-loader": "^1.0.7",
+    "brotli-webpack-plugin": "^1.1.0",
+    "compression-webpack-plugin": "^3.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "atob": "^2.1.2",
+    "axios": "^0.19.0",
+    "expose-loader": "^0.7.5",
+    "jsbi": "^2.0.5",
+    "tweetnacl": "^1.0.1",
+    "url": "^0.11.0",
+    "wavelet-client": "^1.1.0",
+    "websocket": "^1.0.28"
+  }
+}

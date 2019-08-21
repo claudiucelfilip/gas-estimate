@@ -1,0 +1,7 @@
+src
+node_modules
+life-web
+index.*
+webpack.*
+fib_recursive.wasm
+yarn.lock
